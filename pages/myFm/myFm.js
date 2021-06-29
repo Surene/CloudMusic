@@ -1,6 +1,7 @@
 // pages/myFm/myFm.js
 import {getMyFm,getMusicDetail,getMusicLyrics,getMusicUrl,checkMusic,addToLikelist} from '../../network/myFM'
 import {parseLrc,formatNumber,artistsName} from '../../utils/util'
+import {getLikelist} from '../../network/playlist'
 let innerAudioContext = getApp().globalData.backAudioManager
 let app  = getApp()
 Page({
@@ -76,7 +77,16 @@ Page({
       }
     )
   },
-
+  _getLikelist(){
+    getLikelist().then(res => {
+      let ids = res.ids
+      let id = this.data.currentMusic.id
+      let isLike = ids.includes(id)
+      this.setData({
+        isLike
+      })
+    })
+  },
   async _getMyFm(){
     let musics = []
     let currentMusic = {}
@@ -115,6 +125,7 @@ Page({
     })
     await this._getMusicLyrics(currentMusic.id)
     await this._getMusicUrl(currentMusic.id)
+    await this._getLikelist()
   },
   _getMusicDetail(ids){
     getMusicDetail(ids).then(res => {
@@ -314,14 +325,13 @@ Page({
   },
   likeMusic(e){
     if (getApp().globalData.isLogin) {
-      let isLike = !this.data.siLike
+      let isLike = !this.data.isLike
       this.setData({
         isLike
       })
       let id = this.data.currentMusic.id
-      console.log(isLike);
       addToLikelist(id,isLike).then(res => {
-        console.log(res);
+        // console.log(res);
       }) 
     }else{
       wx.navigateTo({
