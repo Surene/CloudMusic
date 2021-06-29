@@ -1,0 +1,160 @@
+page{
+    background: rgb(105, 90, 90);
+    height: 100%;
+}
+.bgImage{
+    height:100%;
+    width:100%;
+  }
+.myfm{
+    color: white;
+    height: 100%;
+}
+.fm_header{
+    height: 10%;
+    display: flex;
+    padding: 30rpx;
+    font-size: 38rpx;
+}
+.fm_header .fm_header_content{
+    flex: 1;
+}
+.fm_header_content_text{
+    text-align: center;
+}
+.fm_header .fm_header_content image{
+    width: 60rpx;
+}
+.fm_header_content_more{
+    position: relative;
+    left: 180rpx;
+}
+.fm_body{
+    height: 70%;
+}
+.fm_body_content{
+    text-align: center;
+    padding-top: 15%;
+}
+.fm_body_cover image{
+    width: 80%;
+    height: auto;
+}
+.lyrics{
+    position: relative;
+    top: -100rpx;
+}
+.haslyrics{
+    height: 1000rpx;
+    font-size: 36rpx;
+    text-align: center;
+    overflow: scroll;
+}
+.lyrics_item{
+    padding-top: 40rpx;
+}
+.placeholder{
+    height: 450rpx;
+}
+.fm_foot{
+    width: 100%;
+    height: 20%;
+    background: rgb(105, 90, 90);   
+    position: fixed;
+    bottom: 0;    
+}
+.fm_foot_content{
+    padding: 30rpx;
+}
+.fm_body_name{
+    padding-top: 40rpx;
+    font-size: 38rpx;
+}
+.fm_body_artists{
+    padding-top: 20rpx;
+    color: grey;
+}
+.fm_progress_bar{
+    display: flex;
+}
+.fm_foot_silder{
+    flex: 1;
+}
+.fm_progress_bar_time{
+    text-align: center;
+    position: relative;
+    top: 16rpx;
+}
+.fm_control_group{
+    display: flex;
+    position: relative;
+    top: 60rpx;
+}
+.group_item{
+    flex: 1;
+    text-align: center;
+}
+.group_item image{
+    width: 60rpx;
+}
+.controlplay image{
+    width: 120rpx;
+    position: relative;
+    top: -30rpx;
+}
+.sound_level{
+    padding: 30rpx;
+    padding-bottom: 0;
+    position: relative;
+    top: -120rpx;
+    left: 20rpx;
+}
+.sound_level_content{
+    display: flex;
+}
+.sound_level .sound_level_icon{
+    flex: 1;
+}
+.sound_level_select{
+    flex: 10;
+    position: relative;
+    top: -15rpx;
+    left: -20rpx;
+}
+.sound_level_icon image{
+    width: 30rpx;
+}
+.control_music{
+    width: 80%;
+    text-align: center;
+    position: fixed;
+    z-index: 9;
+    top: 50%;
+    left: 10%;
+    border-bottom: 1rpx solid rgb(145, 141, 141);
+}
+.control_lyrics .control_image{
+    width: 10rpx;
+    position: absolute;
+    z-index: 9;
+    top: 50%;
+}
+.control_image image{
+    width: 60rpx;
+    position: relative;
+    top: -30rpx;
+}
+.control_time{
+    width: 10rpx;
+    position: absolute;
+    z-index: 9;
+    top: 50%;
+    font-size: 24rpx;
+    left: 90%;
+    color: rgb(170, 161, 161);
+}
+.control_time_content{
+    position: relative;
+    left: 10rpx;
+    top: -14rpx;
+}

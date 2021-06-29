@@ -1,0 +1,22 @@
+<hover-play wx:if="{{isPlay}}" myid="{{currentPlay.id}}" cover="{{currentPlay.al.picUrl}}" name="{{currentPlay.name}}" ar="{{filter.artistsName(ar)}}"></hover-play>
+
+<scroll-view class="playlist_tab">
+    <block wx:for="{{categories}}" wx:key="index">
+        <view class="categorise">
+            <view class="categories_name">
+                <text>{{item.type}}</text>
+            </view>
+            <view class="categories_content">
+                <block wx:for="{{item.data[0]}}"  wx:key="index" wx:for-item="itemdata">
+                    <view class="categories_content_item">
+                        <navigator class="" url="../playlistCategory/playlistCategory?tab={{itemdata.name}}" hover-class="navigator-hover" open-type="navigate">
+                            <text wx:if="{{itemdata.hot}}">🔥 </text>
+                            <text>{{itemdata.name}}</text>
+                        </navigator>
+                    </view>
+                </block>
+            </view>
+        </view> 
+    </block>
+</scroll-view>
+  

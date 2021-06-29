@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "hover-play":"../../components/hover-play/hover-play"
+
+  },
+  "navigationBarTitleText": "搜索"
+}

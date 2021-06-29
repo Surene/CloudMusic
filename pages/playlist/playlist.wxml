@@ -1,0 +1,26 @@
+<hover-play wx:if="{{isPlay}}" myid="{{currentPlay.id}}" cover="{{currentPlay.al.picUrl}}" name="{{currentPlay.name}}" ar="{{filter.artistsName(ar)}}"></hover-play>
+
+<view class="playlist">
+    <view class="playlist_bg" style="background: url('{{playlistCover}}') center; "> 
+    </view>
+    <view class="playlist_info">
+        <view class="playlist_cover">
+            <image src="{{playlistCover}}" mode="widthFix"/>
+        </view>
+        <view class="playlist_detail">
+            <view class="playlist_detail_item name">
+                <text>{{playlist.name}}</text>
+            </view>
+            <view class="playlist_detail_item creator">
+                <image src="{{playlist.creator.avatarUrl}}" mode="widthFix" />
+                <text class="nickname">{{playlist.creator.nickname}}</text>
+            </view>
+            <view class="playlist_detail_item description">
+                <text>{{playlist.description || '无.'}}</text>
+            </view>     
+        </view>  
+    </view>
+        
+    <song-list songlist="{{musics}}"></song-list>
+</view>
+  

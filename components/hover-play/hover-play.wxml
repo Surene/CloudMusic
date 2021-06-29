@@ -1,0 +1,31 @@
+<view bind:tap="navto" class="container">
+  <view class="hoverplay">
+    <view class="cover item">
+      <view class="coveritem {{isPlay?'':'notplaying'}}">
+        <image src="{{cover}}" mode="aspectFill"/>  
+      </view>
+        
+      <!-- <image src="{{cover}}" mode="aspectFill"/> -->
+      
+      
+    </view>
+    <view class="info item">
+      <text>{{name}}-{{ar}}</text>
+    </view>
+    <view class="progress">
+      <mp-progress class="mp_progress" config="{{config}}" percentage="{{percentage}}" style="position: relative;"></mp-progress>
+    </view>
+    <view class="play item" catch:tap="play">
+      <view wx:if="{{isPlay}}">
+        <image src="../../assets/image/index/on.png" mode="widthFix"/>  
+      </view>
+      <view wx:else>
+        <image src="../../assets/image/index/play.png" mode="widthFix"/> 
+      </view>
+        
+    </view>  
+    <view class="list item">
+      <image src="../../assets/image/index/list.png" mode="widthFix"/>  
+    </view>
+  </view>  
+</view>

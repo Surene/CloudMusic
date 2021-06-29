@@ -1,0 +1,108 @@
+<hover-play wx:if="{{isPlay}}" myid="{{currentPlay.id}}" cover="{{currentPlay.al.picUrl}}" name="{{currentPlay.name}}" ar="{{filter.artistsName(ar)}}"></hover-play>
+
+<view class="search">
+    <view class="fix_search_box">
+        <view class="search_box">
+            <view class="search_icon">
+                <image src="../../assets/image/search/search.png" mode="widthFix"/>
+            </view>
+            <view>
+                <input  bindfocus="textInput" bindconfirm="confirmSearch"  value="{{currentWord}}" bindinput="textInput" placeholder="搜索歌曲" type="text" placeholder-class="input-placeholder"/>
+            </view>
+            <view wx:if="{{isSearching || showResult}}" class="cansel_icon" bind:tap="cancelClick">
+                <image src="../../assets/image/search/cancel.png" mode="widthFix"/>
+            </view>
+            
+        </view>
+    </view>
+    <view class="search_suggest" wx:if="{{isSearching && !showResult}}">
+        <view class="search_currentword" data-currentword='{{item}}' bind:tap="confirmSearch">
+            <text>搜索"{{currentWord}}"</text>
+        </view>
+        <block wx:for="{{search_suggest}}" wx:key="index">
+            <view class="search_suggest_item" data-currentword='{{item.keyword}}' bind:tap="confirmSearch">
+                <view class="search_item_img">
+                    <image src="../../assets/image/search/search.png" mode="widthFix"/>
+                </view>
+                <view class="item_keyword">
+                    <text>{{item.keyword}}</text>
+                </view>
+                    
+            </view>
+        </block>
+            
+    </view>
+    <view class="search_result" wx:if="{{!isSearching && showResult}}">
+        <block wx:for="{{search_result}}" wx:key="index">
+            <navigator url="../../pages/play/play?id={{item.id}}" class="search_result_item">
+                <view class="search_result_info">
+                    <view class="search_result_info_name">
+                        <text>{{item.name}}</text>
+                    </view>
+                    <view class="search_result_info_artists">
+                        <view wx:for="{{item.artists}}" wx:key="index" wx:for-item="artists">
+                            {{artists.name}}
+                            <text wx:if="{{item.artists.length >= 2 && item.artists.length-1 > index}}">/</text>
+                        </view>
+                        <text>-{{item.album.name}}</text>  
+                    </view>
+                </view>
+                <view>
+                    <image src="../../assets/image/search/bofang.png" mode="widthFix"/>
+                </view>   
+            </navigator>
+        </block>
+    </view>
+      
+      
+    <view wx:if="{{history != false && !isSearching}}"  class="search_history">
+        <view class="search_history_header">
+            <view>
+                <text>历史记录</text>
+            </view>
+            <view bind:tap="clearHistory">
+                <image src="../../assets/image/search/delete.png" mode="widthFix"/>
+            </view>
+        </view>
+        <view class="search_history_content">
+            <block wx:for="{{history}}" wx:key="index">
+                <view class="search_history_content_item" data-currentword='{{item}}' bind:tap="confirmSearch" >
+                    <text>{{item}}</text>
+                </view>
+            </block>
+        </view>
+    </view>
+    <view class="hot_search" wx:if="{{!isSearching && !showResult}}">
+        <view class="hot_search_header">
+            <text>热搜榜</text>
+        </view>
+        <view class="hot_search_content">
+            <block wx:for="{{hot_search}}" wx:key="index">
+                    <view class="hot_search_item" bind:tap="confirmSearch" data-currentword='{{item.searchWord}}'  >
+                        <view class="hot_search_rank">
+                            <text>{{index+1}}</text>
+                        </view>
+                        <view class="item_content">
+                            <view class="item_img">
+                                <text>{{item.searchWord}}</text>
+                                <view wx:if="{{item.iconUrl != undefined}}">
+                                    <image src="{{item.iconUrl}}" mode="widthFix" />
+                                </view>
+                            </view> 
+                            <view class="item_content_content">                      
+                                <text>{{item.content}}</text>
+                            </view>
+                        </view>
+                        <view class="item_score">
+                            <text>{{item.score}}</text>
+                        </view>
+                    </view>
+            </block>
+        </view>
+          
+    </view>
+      
+      
+      
+</view>
+  

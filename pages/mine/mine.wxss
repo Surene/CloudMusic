@@ -1,0 +1,219 @@
+/* pages/mine/mine.wxss */
+.mine{
+    height: 100%;
+    background: #eeeeee;
+    padding-bottom: 50rpx;
+}
+.main_content{
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+}
+.profile{
+    padding-top: 40rpx;
+    padding-bottom: 25rpx;
+}
+.please_login,.login{
+    padding-left: 20rpx;
+}
+.login view,.please_login view{
+    display: inline-block;
+    text-align: center;
+    vertical-align:middle;
+    font-weight: 700;
+    color: black;
+}
+.lgout{
+    border-radius: 15rpx;
+    background: #ffffff;
+    font-weight: 300;
+    font-size: 28rpx;
+    position: relative;
+    left: 100rpx;
+}
+.login image,.please_login image{
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+    background-color: #eeeeee;
+    margin-right: 40rpx;
+}
+.basic_info{
+    background: #ffffff;
+    border-radius: 15rpx;
+}
+.basic_info .info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10rpx;
+}
+.info .info_item{
+    position: relative;
+    width: 24%;
+    font-size: 26rpx;
+    text-align: center;
+    padding: 15px 0;
+}
+.info_item image{
+    width: 60rpx;
+}
+
+.like_music{
+    margin-top: 20rpx;
+    background-color: #ffffff;
+    border-radius: 15rpx;
+    height: 200rpx;
+    
+}
+.like_music .love_icon{
+    width: 120rpx;
+    height: 120rpx;
+    background: #cccccc;
+    border-radius: 15rpx;
+    text-align: center;
+    position: relative;
+    top: 40rpx;
+    left: 40rpx;
+}
+
+.like_music .love_icon image{
+    width: 80rpx;
+    position: relative;
+    top: 20rpx;
+}
+.like_music .loved{
+    display: inline-block;
+}
+.like_music .love_info{
+   font-size: 30rpx;
+   position: relative;
+   top: 45rpx;
+   left: 80rpx;
+}
+.love_heart{
+   width: 180rpx;
+   height: 80rpx;
+   border: #cccccc 2rpx solid;
+   border-radius: 50rpx;
+   position: relative;
+   left: 200rpx;
+   top: 30rpx;
+   font-size: 24rpx;
+}
+.love_heart image{
+    width: 50rpx;
+    position: relative;
+    left: 15rpx;
+    top: 15rpx;
+}
+.love_heart text{
+    padding-left: 20rpx;
+}
+.mine_tab{
+    padding-top: 40rpx;
+    padding-bottom: 20rpx;
+}
+.song_list{
+    min-height: 250rpx;
+    background: #ffffff;
+    border-radius: 15rpx;
+    margin-bottom: 20rpx;
+}
+.add_list{
+    padding-top: 40rpx;
+    line-height: 40rpx;
+}
+.add_list .create{
+    font-size: 28rpx;
+    position: relative;
+    left: 40rpx;
+    bottom: 7rpx;
+    color: #646464;
+}
+.add_list view{
+    display: inline-block;
+}
+.add_list image{
+    position: relative;
+    left: 366rpx;
+    width: 40rpx;
+    margin-left: 40rpx;
+}
+.import_list{
+    display: flex;
+}
+.import_list text{
+    font-size: 32rpx;
+    position: relative;
+    left: 60rpx;
+    top: 44rpx;
+}
+.import_list image{
+    width: 80rpx;
+    padding-left: 40rpx;
+    padding-top: 40rpx;
+}
+.favorite_list{
+    min-height: 250rpx;
+    background: #ffffff;
+    border-radius: 15rpx;
+}
+.favorite{
+    padding-top: 54rpx;
+    display: inline-block;
+}
+.favorite_text{
+    font-size: 28rpx;
+    position: relative;
+    left: 40rpx;
+    bottom: 7rpx;
+    color: #646464;
+}
+.favorite image{
+    width: 40rpx;
+    position: relative;
+    left: 646rpx;
+    bottom: 40rpx;
+}
+.favorite_text2{
+    font-size: 28rpx;
+    position: relative;
+    left: 150rpx;
+    top: 40rpx;
+}
+
+.music_list{
+    width: 100%;
+    padding: 35rpx;
+}
+.music_list_item{
+    display: flex;
+}
+.music_list_cover image{
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 15rpx;
+}
+.music_list_info{
+    flex: 1;
+    position: relative;
+    left: 20rpx;
+    top: 20rpx;
+}
+.music_list_info .item_name{
+    font-size: 32rpx;
+}
+.item_count{
+    font-size: 24rpx;
+}
+.music_list_do{
+    width: 80rpx;
+    padding-left: 10rpx;
+}
+.music_list_do image{
+    position: relative;
+    left: 0rpx;
+    top: 30rpx;
+    width: 40rpx;
+}
+

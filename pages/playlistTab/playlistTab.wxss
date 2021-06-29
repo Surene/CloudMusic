@@ -1,0 +1,30 @@
+page{
+    background: #eee;
+    width: 100%;
+}
+.playlist_tab{
+    width: 100%;
+}
+.categorise{
+    padding-top: 60rpx;
+}
+.categories_name{
+    font-size: 34rpx;
+    padding-left: 40rpx;
+    padding-right: 40rpx;
+}
+.categories_content{
+    padding-top: 60rpx;
+}
+.categories_content_item{
+    display: inline-block;
+    min-width: 20%;
+    height: 80rpx;
+    text-align: center;
+    margin-bottom: 40rpx;
+    margin-left: 4%;
+    background: #ddd;
+    line-height: 80rpx;
+    border-radius: 40%;
+    font-size: 32rpx;
+}

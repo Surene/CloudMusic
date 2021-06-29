@@ -1,0 +1,15 @@
+{
+  "name": "cloudmusic",
+  "version": "1.0.0",
+  "main": "app.js",
+  "dependencies": {
+    "mp-progress": "^1.2.14"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Surene",
+  "license": "ISC",
+  "description": ""
+}

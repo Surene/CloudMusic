@@ -1,0 +1,88 @@
+.container{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 11;
+    border-top: 1rpx solid #bbb;
+    height: 120rpx;
+    background: #eee;
+}
+.hoverplay{
+    display: flex;
+    line-height: 120rpx;
+}
+.coveritem{
+    width: 100rpx;
+    height: 100rpx;
+    background: rgb(27, 26, 26);
+    border-radius: 50%;
+    position: relative;
+    top: -10rpx;
+    left: 40rpx;
+    animation: audio-rotate 30s linear infinite;
+
+}
+.notplaying{
+    animation-play-state:paused;
+}
+@keyframes audio-rotate {
+    0% {
+      transform: rotateZ(0deg);
+    }
+   
+    100% {
+      transform: rotateZ(360deg);
+    }
+  }
+.cover{
+    flex: 6;
+}
+.info{
+    padding-left: 80rpx;
+    flex: 18;
+    word-break:break-all;
+			text-overflow:ellipsis;
+			display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+			-webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+			-webkit-line-clamp:1 ; /** 显示的行数 **/
+			overflow: hidden;  /** 隐藏超出的内容 **/
+			cursor:default;
+			text-indent: 0em;
+}
+.play{
+    flex: 4;
+    text-align: center;
+}
+.progress{
+    flex: 1;
+    position: relative;
+    top: 20rpx;
+    left: 170rpx;
+}
+
+.list{
+    flex: 4;
+    text-align: center;
+    padding-left: 20rpx;
+}
+.play image{
+    width: 40rpx;
+    position: relative;
+    top: 20rpx;
+    left: -5rpx;
+}
+.list image{
+    width: 100rpx;
+    position: relative;
+    top: 20rpx;
+    
+}
+
+.cover image{
+    width: 70rpx;
+    height: 70rpx;
+    border-radius: 50%;
+    position: relative;
+    left: 15rpx;
+    top: 15rpx;
+}

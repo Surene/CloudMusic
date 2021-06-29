@@ -1,0 +1,63 @@
+.playlist_bg{
+    position: relative;
+	/* 宽度120%，-10%让元素集中 */
+	left: -10%;
+	/* 为了实现椭圆效果 */
+	width: 120%;
+	height: 432rpx;
+	/* 只设置左下角和右下角的圆角 */
+	border-radius: 0 0 80% 80%;
+	/* 设置高斯模糊 */
+	filter: blur(200rpx);
+	/* 背景图片 */
+	background-size: cover;
+}
+.playlist_info{
+    position: absolute;
+    top: 60rpx;
+    left: 0;
+    right: 0;
+    display: flex;
+    padding: 30rpx;
+}
+.playlist_cover{
+    flex: 10;
+    position: relative;
+}
+.playlist_cover image{
+    width: 300rpx;
+    border-radius: 30rpx;
+}
+.playlist_detail{
+    flex: 13;
+}
+.creator{
+    height: 60rpx;
+    line-height: 60rpx;
+}
+.creator image{
+    width: 60rpx;
+    border-radius: 50%;
+}
+.name{
+    font-size: 40rpx;
+}
+.playlist_detail_item{
+    padding-top: 20rpx;
+    padding-left: 20rpx;
+}
+.description text{
+    word-break:break-all;
+			text-overflow:ellipsis;
+			display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+			-webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+			-webkit-line-clamp:1 ; /** 显示的行数 **/
+			overflow: hidden;  /** 隐藏超出的内容 **/
+			cursor:default;
+			text-indent: 0em;
+}
+.nickname{
+    position: relative;
+    top: -15rpx;
+    padding-left: 20rpx;
+}

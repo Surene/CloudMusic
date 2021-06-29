@@ -1,0 +1,124 @@
+/**index.wxss**/
+
+.container{
+  background: #ccc;
+}
+.swiper{
+  background: #eee;
+  padding-top: 20rpx;
+  padding-left: 10rpx;
+  padding-right: 20rpx;
+  padding-bottom: 20rpx;
+}
+.swiper-item{
+  border-radius: 20rpx;
+  width: 100%;
+}
+.themv{
+  margin-top: 20rpx;
+}
+.more{
+  height: 20rpx;
+}
+.swiper-image{
+  width: 100%;
+  height: 100%;
+  border-radius: 20rpx;
+  position: relative;
+  left: 10rpx;
+  right: 10rpx;
+}
+.main{
+  background: #eee;
+  padding-bottom: 40rpx;
+}
+.main_info{
+  display: flex;
+}
+.main_item{
+  flex: 1;
+  text-align: center;
+}
+.main_item image{
+  width: 200rpx;
+}
+.main_item:nth-child(4) image{
+  width: 100rpx;
+  height: 100rpx;
+  position: relative;
+  top: 4rpx;
+}
+.main_item:nth-child(4) text{
+  position: relative;
+  top: 12rpx;
+}
+.recommand{
+  background: #eee;
+  width: 100%;
+  padding-left: 20rpx;
+  padding-top: 20rpx;
+  padding-right: 20rpx;
+  border-top: 1rpx solid rgb(207, 207, 207);
+  border-radius: 0 0 40rpx 40rpx;
+}
+.recommand_info{
+  display: flex;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+.recommand_info_child1{
+  flex: 9;
+  font-size: 38rpx;
+  font-weight: 700;
+  padding-left: 20rpx;
+}
+.recommand_info_child2{
+  flex: 2;
+  border: 2rpx solid #aaa;
+  text-align: center;
+  border-radius: 20rpx;
+  position: relative;
+  left: -20rpx;
+}
+.recommand_playlist{
+  display: flex;
+  overflow: scroll;
+}
+.recommand_playlist_item{
+  padding-left: 20rpx;
+}
+.cover{
+  width: 200rpx;
+  border-radius: 20rpx;
+}
+.cover_{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 20rpx;
+}
+.cover_icon{
+  width: 30rpx;
+}
+.item_info{
+
+  width: 120rpx;
+  font-size: 24rpx;
+  color: white;
+  position: relative;
+  left: 70rpx;
+  top: -190rpx;
+  background: rgba(131, 130, 130, 0.5);
+  border-radius: 40rpx;
+}
+.item_info text{
+  position: relative;
+  top: -5rpx;
+}
+.item_name{
+  font-size: 28rpx;
+  text-overflow: ellipsis;
+  max-height: 76rpx;
+  overflow: hidden;
+  position: relative;
+  top: -20rpx;
+}

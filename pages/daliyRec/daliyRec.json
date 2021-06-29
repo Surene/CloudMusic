@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "song-list":"../../components/song-list/song-list",
+    "hover-play":"../../components/hover-play/hover-play"
+  },
+  "navigationBarTitleText": "每日推荐"
+}

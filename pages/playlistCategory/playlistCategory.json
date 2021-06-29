@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "hover-play":"../../components/hover-play/hover-play"
+  },
+  "onReachBottomDistance":300,
+  "navigationBarTitleText": "歌单广场"
+}

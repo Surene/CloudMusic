@@ -1,0 +1,93 @@
+<!--index.wxml-->
+<wxs src="../../utils/utils.wxs" module="filter"></wxs>
+<hover-play wx:if="{{isPlay}}" myid="{{currentPlay.id}}" cover="{{currentPlay.al.picUrl || currentPlay.album.picUrl}}" name="{{currentPlay.name}}" ar="{{filter.artistsName(ar)}}"></hover-play>
+<view class="container">
+    <view class="swiper">
+        <swiper  circular="{{true}}" indicator-active-color="#eeeeee" indicator-color="{{indicatorColor}}" indicator-dots="{{true}}" autoplay="{{true}}" interval="{{5000}}" duration="{{500}}">
+            <block wx:for="{{banners}}" wx:key="index">
+                <swiper-item class="swiper-item">
+                    <image  mode="widthFix" class="swiper-image" src="{{item.imageUrl}}" />
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <view class="main">
+        <view class="main_info">
+            <view wx:for="{{main}}" wx:key="index" class="main_item">
+                <navigator url="{{item.url}}">
+                    <view class="main_item_image">
+                        <image src="{{item.image}}" mode="widthFix"/>
+                    </view>
+                    <view>
+                        <text>{{item.info}}</text>
+                    </view>
+                </navigator>
+            </view>
+        </view>
+          
+    </view>
+    <view class="recommand">
+        <view class="recommand_info">
+            <view class="recommand_info_child1">
+                <text>推荐歌单</text>
+            </view>
+            <navigator url="../playlistTab/playlistTab" class="recommand_info_child2">
+                <text>更多></text>
+            </navigator>    
+        </view>
+        <view class="recommand_playlist">
+            <block wx:for="{{recommend}}" wx:key="index">
+                <navigator url="../../pages/playlist/playlist?id={{item.id}}" class="recommand_playlist_item">
+                    <view>
+                        <image class="cover" src="{{item.picUrl}}" mode="widthFix"/>
+                        <view class="item_info">
+                            <image class="cover_icon" mode="widthFix" src="../../assets/image/index/bofang.png" />
+                            <text>{{filter.tranNumber(item.playcount)}}</text>
+                        </view>  
+                    </view>
+                    <view class="item_name">
+                      {{item.name}}  
+                    </view>
+                        
+                </navigator>
+                  
+            </block>
+        </view>
+    </view>
+    <view class="recommand themv">
+        <view class="recommand_info">
+            <view class="recommand_info_child1">
+                <text>推荐MV</text>
+            </view>
+            <view class="recommand_info_child2">
+                <text>更多></text>
+            </view>    
+        </view>
+        <view class="recommand_playlist">
+            <block wx:for="{{newMV}}" wx:key="index">
+                <view class="recommand_playlist_item">
+                    <view>
+                        <image class="cover_" src="{{item.cover}}" mode="aspectFill" />
+                        <view class="item_info">
+                            <image class="cover_icon" mode="widthFix" src="../../assets/image/index/bofang.png" />
+                            <text>{{filter.tranNumber(item.playCount)}}</text>
+                        </view>  
+                    </view>
+                    <view class="item_name">
+                      {{item.name}}  
+                    </view>
+                        
+                </view>
+                  
+            </block>
+        </view>
+    </view>
+    <view class="more">
+        
+    </view>
+      
+      
+      
+      
+    
+</view>

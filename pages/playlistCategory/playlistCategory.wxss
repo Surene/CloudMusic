@@ -1,0 +1,44 @@
+.recommand_playlist{
+padding-top: 20rpx;
+padding-left: 10rpx;
+  }
+.recommand_playlist_item{
+   display: inline-block;
+   width: 30%;
+    padding-left: 20rpx;
+  }
+  .cover{
+    width: 200rpx;
+    border-radius: 20rpx;
+  }
+  .cover_{
+    width: 200rpx;
+    height: 200rpx;
+    border-radius: 20rpx;
+  }
+  .cover_icon{
+    width: 30rpx;
+  }
+  .item_info{
+  
+    width: 120rpx;
+    font-size: 24rpx;
+    color: white;
+    position: relative;
+    left: 70rpx;
+    top: -190rpx;
+    background: rgba(131, 130, 130, 0.5);
+    border-radius: 40rpx;
+  }
+  .item_info text{
+    position: relative;
+    top: -5rpx;
+  }
+  .item_name{
+    font-size: 28rpx;
+    text-overflow: ellipsis;
+    max-height: 76rpx;
+    overflow: hidden;
+    position: relative;
+    top: -20rpx;
+  }

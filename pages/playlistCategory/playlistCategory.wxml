@@ -1,0 +1,23 @@
+<wxs src="../../utils/utils.wxs" module="filter"></wxs>
+<hover-play wx:if="{{isPlay}}" myid="{{currentPlay.id}}" cover="{{currentPlay.al.picUrl}}" name="{{currentPlay.name}}" ar="{{filter.artistsName(ar)}}"></hover-play>
+
+<scroll-view class="recommand_playlist" scroll-y="{{true}}" lower-threshold="50"> 
+    <block wx:for="{{playlists}}" wx:key="index">
+        <view class="recommand_playlist_item">
+            <navigator url="../../pages/playlist/playlist?id={{item.id}}" hover-class="navigator-hover" open-type="navigate">
+                <view>
+                    <image class="cover" src="{{item.coverImgUrl}}" mode="widthFix"/>
+                    <view class="item_info">
+                        <image class="cover_icon" mode="widthFix" src="../../assets/image/index/bofang.png" />
+                        <text>{{filter.tranNumber(item.playCount)}}</text>
+                    </view>  
+                </view>
+                <view class="item_name">
+                    {{item.name}}  
+                </view>
+            </navigator>         
+        </view>
+    </block>
+</scroll-view>
+  
+  

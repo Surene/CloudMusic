@@ -1,0 +1,58 @@
+/* pages/login/login.wxss */
+page{
+    background: #C20C0C;
+}
+.to_login{
+    height: 100%;
+}
+.logo{
+    width: 150rpx;
+    height: 150rpx;
+    background: rgba(255, 0, 0, 0.822);
+    border-radius: 50%;
+    position: relative;
+    top: 200rpx;
+    left: 300rpx;
+}
+.logo image{
+    width: 100rpx;
+    position: relative;
+    top: 25rpx;
+    left: 25rpx;
+}
+.form-common {
+    position: relative;
+    top: 400rpx;
+	padding: 48rpx;
+    color: white;
+}
+
+.formc-cnt {
+	padding: 16rpx 0;
+	display: flex;
+	border-bottom: 1px solid #eee;
+	margin: 16rpx 0
+}
+
+.form-common button,
+.btnhover {
+	margin-top: 48rpx;
+	display: block;
+	background-color: #d43c33;
+	height: 2.4em;
+	padding: 0;
+	line-height: 2.4;
+	border-radius: 5rpx;
+	font-size: 32rpx;
+    color: white;
+    border-radius: 40rpx;
+}
+
+.formc-cnt text {
+	text-align: left
+}
+
+.formc-cnt input {
+	flex: 1;
+	display: block
+}

@@ -1,0 +1,72 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/login/login",
+          "pathName": "pages/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/mine/mine",
+          "pathName": "pages/mine/mine",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/search/search",
+          "pathName": "pages/search/search",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/daliyRec/daliyRec",
+          "pathName": "pages/daliyRec/daliyRec",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/myFm/myFm",
+          "pathName": "pages/myFm/myFm",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/playlistTab/playlistTab",
+          "pathName": "pages/playlistTab/playlistTab",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/rank/rank",
+          "pathName": "pages/rank/rank",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/play/play",
+          "pathName": "pages/play/play",
+          "query": "id=485508366",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

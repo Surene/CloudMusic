@@ -1,0 +1,218 @@
+<hover-play wx:if="{{isPlay}}" myid="{{currentPlay.id}}" cover="{{currentPlay.al.picUrl}}" name="{{currentPlay.name}}" ar="{{filter.artistsName(ar)}}"></hover-play>
+
+<view class="mine">
+    <view class="main_content">
+        <view class="profile">
+            <view wx:if="{{isLogin}}" class="login">
+                    <view>
+                    <image src="{{avatar}}" mode="widthFix">    
+                    </image>    
+                    </view>
+                    <view>
+                        <text>{{nickname}}</text>    
+                    </view>
+                    <view bind:tap="lgout" class="lgout">
+                        <text>退出登陆</text>     
+                    </view>
+            </view>
+            <view wx:else class="please_login">
+                <navigator url="../login/login" hover-class="navigator-hover" open-type="navigate">
+                    <view>
+                    <image src="../../assets/image/mine-avatar/default_avatar.png" mode="widthFix">    
+                    </image>    
+                    </view>
+                    <view>
+                        <text>立即登陆></text>    
+                    </view>
+                </navigator>
+            </view>
+              
+        </view>
+        <view class="basic_info">
+            <view class="info">
+                <view class="info_item">
+                    <view>
+                        <image  src="../../assets/image/basic-info/bendi.png" mode="widthFix"></image>     
+                    </view>
+                    <view>
+                        <text>本地/下载</text>    
+                    </view>
+                </view>
+                <view class="info_item">
+                    <view>
+                        <image  src="../../assets/image/basic-info/yunpan.png"mode="widthFix"></image> 
+                    </view>
+                    <view>
+                        <text>云盘</text>    
+                    </view>
+                      
+                    
+                </view>
+                <view class="info_item">
+                    <view>
+                                              <image  src="../../assets/image/basic-info/yigou.png" mode="widthFix"></image> 
+
+                    </view>
+                    <view>
+                        <text>已购</text>
+                    </view>
+                      
+                </view>
+                <view class="info_item" bind:tap="navtoRecent">
+                    <view>
+                                            <image  src="../../assets/image/basic-info/bofang.png" mode="widthFix"></image> 
+
+                    </view>
+                      
+                    <text>最近播放</text>
+                </view>
+                <view class="info_item">
+                    <view class="" hover-class="none" hover-stop-propagation="false">
+                                            <image  src="../../assets/image/basic-info/haoyou.png" mode="widthFix"></image> 
+
+                    </view>
+                    <text>我的好友</text>
+                </view>
+                <view class="info_item">
+                    <view>
+                                            <image  src="../../assets/image/basic-info/shouchang.png" mode="widthFix"></image> 
+
+                    </view>
+                      
+                    <text>收藏和赞</text>
+                </view>
+                <view class="info_item">
+                    <view>
+                                            <image  src="../../assets/image/basic-info/boke.png" mode="widthFix"></image> 
+
+                    </view>
+                      
+                    <text>我的播客</text>
+                </view>
+                <view class="info_item">
+                    <view>
+                                            <image  src="../../assets/image/basic-info/tianjia.png" mode="widthFix"></image> 
+
+                    </view>
+                      
+                    <text>音乐应用</text>
+                </view>
+            </view>
+        </view>
+        <view class="like_music">
+            <navigator class=""  url="../../pages/playlist/playlist?id={{love_music.id}}" hover-class="navigator-hover" open-type="navigate">
+                <view class="love_icon loved" style='background-image:url({{love_music_cover?love_music_cover:""}});background-size:120rpx;opacity: 0.95;'>
+                    <image src="../../assets/image/love-music/love_music-01.png" mode="widthFix"/>
+                </view>
+                <view class="love_info loved">
+                    <view>
+                        <text>我喜欢的音乐</text>
+                    </view>
+                    <view>
+                        <text>{{love_music_count}}首</text>
+                    </view>  
+                </view>
+                <view class="love_heart loved">
+                    <view>
+                        <image src="../../assets/image/love-music/love_music-02.png" mode="widthFix"/>
+                        <text>心动模式</text>
+                    </view>
+                    
+                </view>
+            </navigator>
+                   
+        </view>    
+        <view class="mine_tab">
+            <tab-control titles="{{titles}}"></tab-control>
+        </view>
+        <view class="song_list">
+            <view class="add_list">
+                <view class="create">
+                    <text>创建歌单</text>
+                    <text wx:if="{{isLogin}}">({{create_list_count}}个)</text>
+                </view>
+                <view>
+                    <image src="../../assets/image/song-list/add.png" mode="widthFix"/>
+                </view>
+                <view>
+                    <image src="../../assets/image/song-list/more.png" mode="widthFix"/>
+                </view>      
+            </view>
+            <view class="music_list">
+                <view wx:if="{{isLogin}}">
+                    <view wx:for="{{create_list}}" wx:key="index" >
+                        <navigator url="../../pages/playlist/playlist?id={{item.id}}" open-type="navigate" class="music_list_item">
+                            <view class="music_list_cover">
+                                <image src="{{item.coverImgUrl}}" mode="widthFix"/>
+                            </view>
+                            <view class="music_list_info">
+                                <view class="item_name">
+                                    <!-- 歌单名 -->
+                                    <text>{{item.name}}</text>
+                                </view>
+                                <view class="item_count">
+                                    <text>{{item.trackCount}}首</text>
+                                </view>   
+                            </view>
+                            <view class="music_list_do">
+                                <image src="../../assets/image/song-list/more.png" mode="widthFix"/>
+                            </view>  
+                        </navigator>
+                    </view>
+                      
+                </view>
+            </view>
+              
+            <view class="import_list">
+                <view>
+                    <image src="../../assets/image/song-list/Import.png"mode="widthFix"/>
+                </view>
+                <view>
+                    <text>一键导入外部歌单</text>
+                </view>
+                    
+            </view>
+                
+        </view>
+        <view class="favorite_list">
+            <view class="favorite">
+                <view class="favorite_text">
+                    <text>收藏歌单</text>
+                </view>
+                <view>
+                    <image src="../../assets/image/song-list/more.png" mode="widthFix"/>
+                </view>  
+            </view>
+            <view class="music_list">
+                <view wx:if="{{isLogin}}">
+                    <view wx:for="{{collect_list}}" wx:key="index">
+                        <navigator url="../../pages/playlist/playlist?id={{item.id}}" class="music_list_item" open-type="navigate">
+                        
+                            <view class="music_list_cover">
+                                <image src="{{item.coverImgUrl}}" mode="widthFix"/>
+                            </view>
+                            <view class="music_list_info">
+                                <view class="item_name">
+                                    <!-- 歌单名 -->
+                                    <text>{{item.name}}</text>
+                                </view>
+                                <view class="item_count">
+                                    <text>{{item.trackCount}}首</text>
+                                </view>   
+                            </view>
+                            <view class="music_list_do">
+                                <image src="../../assets/image/song-list/more.png" mode="widthFix"/>
+                            </view>  
+                        </navigator>
+                    </view>
+                      
+                </view>
+                <view wx:elif="{{}}">
+                <text class="favorite_text2">暂无收藏的歌单</text> 
+                </view> 
+            </view>
+             
+        </view>
+          
+    </view>    
+</view>

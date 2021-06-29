@@ -1,0 +1,182 @@
+page{
+    height: 100%;
+}
+.playlist_bg{
+    position: relative;
+	/* 宽度120%，-10%让元素集中 */
+	left: -10%;
+	width: 120%;
+    height: 100vh;
+	/* 设置高斯模糊 */
+	filter: blur(300rpx);
+	/* 背景图片 */
+	background-size: cover;
+}
+.header{
+    position: fixed;
+    top: 0;
+    height: 10vh;
+    padding: 30rpx;
+    width: 100%;
+}
+.play_header{
+    display: flex;
+    width: 100%;
+}
+.play_header .header_content{
+    flex: 1;
+}
+.header_content_text{
+    flex: 5;
+    text-align: center;
+}
+.songname{
+    color: #fff;
+    font-size: 38rpx;
+}
+.ar{
+    padding-top: 10rpx;
+    color: #ccc;
+    font-size: 32rpx;
+}
+.play_header .header_content image{
+    width: 60rpx;
+}
+.header_content_more{
+    position: relative;
+    left: 150rpx;
+}
+.fm_body{
+    position: fixed;
+    top: 10vh;
+    bottom: 20vh;
+    width: 100%;
+}
+.fm_body_content{
+    text-align: center;
+    padding-top: 15%;
+}
+.fm_body_cover{
+    width: 520rpx;
+    height: 520rpx;
+    border-radius: 50%;
+    margin-left: 115rpx;
+    background: rgb(22, 22, 22);
+    text-align: center;
+    position: relative;
+    top: 10vh;
+    animation: audio-rotate 30s linear infinite;
+}
+.playing{
+    animation-play-state:paused;
+}
+@keyframes audio-rotate {
+    0% {
+      transform: rotateZ(0deg);
+    }
+   
+    100% {
+      transform: rotateZ(360deg);
+    }
+  }
+.fm_body_cover image{
+    width: 364rpx;
+    height: 364rpx;
+    border-radius: 50%;
+    position: relative;
+    top: 78rpx;
+}
+.theontrol_group{
+    padding: 30rpx;
+    display: flex;
+    position: relative;
+    top: 22vh;
+}
+.lyrics{
+    position: relative;
+    top: -100rpx;
+}
+.haslyrics{
+    height: 65vh;
+    font-size: 36rpx;
+    text-align: center;
+    overflow: scroll;
+    position: relative;
+    top: 100rpx;
+    padding-top: 40rpx;
+    padding-bottom: -40rpx;
+}
+.lyrics_item{
+    padding-top: 40rpx;
+}
+.placeholder{
+    height: 450rpx;
+}
+.fm_foot{
+    width: 100%;
+    height: 20vh;
+    position: fixed;
+    bottom: 0;    
+}
+.fm_foot_content{
+    padding: 30rpx;
+}
+.fm_body_name{
+    padding-top: 40rpx;
+    font-size: 38rpx;
+}
+.fm_body_artists{
+    padding-top: 20rpx;
+    color: grey;
+}
+.fm_progress_bar{
+    display: flex;
+}
+.fm_foot_silder{
+    flex: 1;
+}
+.fm_progress_bar_time{
+    text-align: center;
+    position: relative;
+    top: 16rpx;
+}
+.fm_control_group{
+    display: flex;
+    position: relative;
+    top: 60rpx;
+}
+.group_item{
+    flex: 1;
+    text-align: center;
+}
+.group_item image{
+    width: 60rpx;
+}
+.controlplay image{
+    width: 120rpx;
+    position: relative;
+    top: -30rpx;
+}
+.sound_level{
+    padding: 30rpx;
+    padding-bottom: 0;
+    position: fixed;
+    top: 120rpx;
+    left: 20rpx;
+    width: 90%;
+}
+.sound_level_content{
+    display: flex;
+}
+.sound_level .sound_level_icon{
+    flex: 1;
+}
+.sound_level_select{
+    flex: 10;
+    position: relative;
+    top: -15rpx;
+    left: -20rpx;
+}
+.sound_level_icon image{
+    width: 30rpx;
+}

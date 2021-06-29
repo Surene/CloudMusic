@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "hover-play":"../../components/hover-play/hover-play"
+  }
+}

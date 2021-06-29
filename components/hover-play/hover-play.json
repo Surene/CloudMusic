@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents":{
+    "mp-progress":"../../miniprogram_npm/mp-progress/component/mp-progress"
+  }
+}

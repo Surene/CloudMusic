@@ -1,0 +1,25 @@
+<view class="to_login">
+
+    <view class="logo">
+        <image src="../../assets/image/login/logo.png" mode="widthFix"/>
+    </view>    
+    <view class="form-common">
+        <form bindsubmit="login">
+            <view class="formc-cnt">
+                <text>账号：</text>
+                <!-- 自定义属性data-type的作用是判断输入类型 -->
+                <input auto-focus bindinput="textinput" data-type="1" placeholder="手机号+86" type="text"/>
+            </view>
+            <view class="formc-cnt">
+                <text>密码：</text>
+                <input auto-focus bindinput="textinput" data-type="2" type="text" password="true"/>
+            </view>
+            <view>
+                <button hover-class="btnhover" formType="submit">登录</button>
+            </view>
+            <view bind:tap="navTo">
+                <button hover-class="btnhover">立即体验</button>
+            </view>
+        </form>
+    </view>
+</view>

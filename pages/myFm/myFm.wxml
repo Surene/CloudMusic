@@ -1,0 +1,116 @@
+<wxs src="../../utils/utils.wxs" module="utils"></wxs>
+<view class="myfm">
+    <view class="fm_header">
+        <view class="fm_header_content" catch:tap="backBefore">
+            <image src="../../assets/image/fm/zhedie.png" mode="widthFix" />
+        </view>
+        <view class="fm_header_content fm_header_content_text">
+            <text>私人FM</text>
+        </view>
+        <view class="fm_header_content fm_header_content_more">
+            <image src="../../assets/image/song-list/more.png" mode="widthFix" />
+        </view>      
+    </view>
+    <view class="sound_level" hidden="{{!showLyrics}}">
+        <view class="sound_level_content">
+            <view class="sound_level_icon">
+                    <image src="../../assets/image/fm/noisy.png" mode="widthFix" />
+            </view>
+            <view class="sound_level_select">
+                <slider   bindchanging="changeSound" block-size="14" max="15" step="1" value="{{soundLevel}}" activeColor="#9C9C9C" backgroundColor="#e9e9e9" />
+            </view>
+        </view>
+    </view>
+    <view class="fm_body">
+        <view wx:if="{{showCover}}" bind:tap="switchLyricsAndCover" class="fm_body_content">
+            <view class="fm_body_cover">
+                <image src="{{currentMusic.album.picUrl}}" mode="widthFix"/>
+            </view> 
+            <view class="fm_body_name">
+                <text>{{currentMusic.name}}</text>
+            </view>
+            <view class="fm_body_artists">
+                <text>{{utils.artistsName(artists)}}></text>
+            </view>   
+        </view>
+        <view bind:tap="switchLyricsAndCover" wx:if="{{showLyrics}}" class="lyrics">
+            <scroll-view  bindscroll="lyricsScroll" scroll-y="{{true}}"  scroll-with-animation="{{true}}" class="haslyrics">
+                <view wx:if="{{currentMusicLyrics}}" >                 
+                    <view class="placeholder">
+                        
+                    </view>
+                    <block wx:for="{{currentMusicLyrics}}" wx:key="index">
+                        <view class="lyrics_item">
+                            <text>{{item.lrc}}</text>
+                        </view>
+                    </block>
+                    <view class="placeholder">
+                        
+                    </view>
+                </view>
+                <view wx:else class="nolyrics">
+                    该歌曲暂无歌词
+                </view>
+                    
+            </scroll-view>
+        </view>
+            
+    </view>
+    <view class="fm_foot">
+        <view class="fm_foot_content">
+            <view class="fm_progress_bar">
+                <view class="fm_progress_bar_time">
+                    <text>{{currentPlayTime}}</text>
+                </view>
+                <view class="fm_foot_silder">
+                    <slider   bindchange="valueChange" block-size="12" max="{{slideStep}}" step="1" value="{{slideValue}}" activeColor="#9C9C9C" backgroundColor="#e9e9e9" />
+                </view>
+                <view class="fm_progress_bar_time">
+                    <text>{{currentMusicDuration}}</text>
+                </view>
+            </view>
+            
+            <view class="fm_control_group">
+                <view class="group_item">
+                    <image src="../../assets/image/fm/nolike.png" mode="widthFix"/>
+                </view>
+                <view class="group_item" bind:tap="likeMusic">
+                    <view hidden="{{!isLike}}">
+                      <image src="../../assets/image/fm/mylike.png" mode="widthFix"/>  
+                    </view>
+                    <view hidden="{{isLike}}">
+                      <image src="../../assets/image/fm/like.png" mode="widthFix"/>  
+                    </view>
+                </view>
+                <view class="group_item controlplay" bind:tap="changePlay">
+                    <view  hidden="{{!isPlay}}">
+                        <image src="../../assets/image/fm/on.png" mode="widthFix"/>
+                    </view>
+                    <view  hidden="{{isPlay}}"> 
+                        <image src="../../assets/image/fm/pause.png" mode="widthFix"/>
+                    </view>
+                </view>
+                <view class="group_item" bind:tap="nextFm">
+                    <image src="../../assets/image/fm/next.png" mode="widthFix"/>
+                </view>
+                <view class="group_item">
+                    <image src="../../assets/image/fm/review.png" mode="widthFix"/>
+                </view>  
+            </view>
+        </view>    
+    </view>  
+</view>                                     
+<view class="control_lyrics" wx:if="{{showLyrics && isScroll}}">
+    <view class="control_image">
+        <image src="../../assets/image/fm/play.png" mode="widthFix"/>
+    </view>
+    <view class="control_music">
+                                
+    </view>
+    <view class="control_time">
+        <text class="control_time_content">{{currentLrcsecq}}</text>
+    </view>
+          
+</view>       
+
+  

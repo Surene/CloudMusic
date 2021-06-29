@@ -1,0 +1,43 @@
+<wxs src="../../utils/utils.wxs" module="utils"></wxs>
+<view class="container">
+  <view class="top_info">
+    <view>
+      <image src="../../assets/image/song-list/bofang_top.png" mode="widthFix"/>
+    </view>
+    <view>
+      <text>播放全部</text>
+    </view>
+    <view  class="selectall">
+      <image src="../../assets/image/song-list/selectall.png" mode="widthFix"/>
+    </view>     
+  </view>
+  <view class="song">
+    <block wx:for="{{songlist}}" wx:key="index">
+      <view   data-currentplay="{{item}}" bind:tap="setCurrentPlay" class="song_item"  hover-class="navigator-hover" >
+        <view class="coverpic" wx:if="{{item.al.picUrl && isDaliy}}">
+          <image src="{{item.al.picUrl}}"  mode="widthFix"/>
+        </view>
+        <view class="coverpic index" wx:else>
+          <text>{{index+1}}</text>
+        </view>
+        <view class="song_info">
+          <view class="song_name">
+            <text>{{item.name}}</text>
+          </view>
+          <view class="song_artists">
+            <text>{{utils.artistsName(item.ar)}}</text>
+          </view>    
+        </view>
+        <view class="fucicon fucicon1" wx:if="{{item.mv != 0}}">
+          <image src="../../assets/image/song-list/bofang.png" mode="widthFix"/>
+        </view>
+        <view class="fucicon fucicon2">
+          <image src="../../assets/image/song-list/more.png" mode="widthFix"/>
+        </view>
+      </view>
+        
+    </block>
+  </view>
+    
+    
+</view>

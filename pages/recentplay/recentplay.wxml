@@ -1,0 +1,6 @@
+<view class="recentplay">
+    <song-list songlist="{{songlist}}"></song-list>
+</view>
+<hover-play wx:if="{{isPlay}}" myid="{{currentPlay.id}}" cover="{{currentPlay.al.picUrl}}" name="{{currentPlay.name}}" ar="{{filter.artistsName(ar)}}"></hover-play>
+
+  

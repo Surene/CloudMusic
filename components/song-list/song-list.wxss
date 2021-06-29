@@ -1,0 +1,75 @@
+.container{
+    background: #fff;
+    padding: 30rpx;
+    padding-top: 60rpx;
+}
+.top_info{
+    display: flex;
+    font-size: 38rpx;
+    font-weight: 700;
+}
+.top_info image{
+    width: 40rpx;
+    padding-right: 40rpx;
+}
+.top_info text{
+    flex: 1;
+    position: relative;
+    top: -8rpx;
+}
+.top_info .selectall{
+    position: relative;
+    left: 400rpx;
+}
+.song{
+    padding-top: 40rpx;
+}
+.song_item{
+    display: flex;
+    padding-bottom: 20rpx;
+}
+.song_item .coverpic image{
+    width: 100rpx;
+    border-radius: 10rpx;
+}
+
+.song_item .fucicon1{
+    position: absolute;
+    left: 550rpx;
+}
+.song_item .fucicon2{
+    position: absolute;
+    left: 620rpx;
+}
+.song_item .fucicon image{
+    width: 60rpx;
+    position: relative;
+    left: 60rpx;
+}
+.song_item .song_info text{
+    padding-left: 20rpx;
+    width: 400rpx;
+    word-break:break-all;
+			text-overflow:ellipsis;
+			display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+			-webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+			-webkit-line-clamp:1 ; /** 显示的行数 **/
+			overflow: hidden;  /** 隐藏超出的内容 **/
+			cursor:default;
+			text-indent: 0em;
+}
+
+.index{
+    width: 60rpx;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 20rpx;
+}
+.song_name{
+    font-size: 36rpx;
+    padding-bottom: 10rpx;
+}
+.song_artists{
+    font-size: 28rpx;
+
+}

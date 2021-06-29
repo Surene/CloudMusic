@@ -1,0 +1,126 @@
+<hover-play wx:if="{{isPlay}}" myid="{{currentPlay.id}}" cover="{{currentPlay.al.picUrl}}" name="{{currentPlay.name}}" ar="{{filter.artistsName(ar)}}"></hover-play>
+
+<view class="rank">
+    <view class="tab">
+        <tab-control titles="{{titles}}" getIndex="{{currentIndex}}" bind:tabClick="tabClick"></tab-control>
+    </view>
+    <view class="official" id="official">
+        <view class="title">
+            <image src="../../assets/image/index/logo.png" mode="widthFix"/>
+            <text>官方榜</text>
+        </view>
+        <block wx:for="{{official}}" wx:key="index">
+            <navigator  url="../../pages/playlist/playlist?id={{item.id}}" hover-class="navigator-hover" open-type="navigate">
+
+            <view class="official_item" style="background:url('{{item.coverImgUrl}}')">
+                <view class="official_item_left">
+                    <view class="official_item_left_name">
+                        <text>{{item.name}}</text>
+                    </view>
+                    <view class="official_item_left_image">
+                        <image src="{{item.coverImgUrl}}" mode="widthFix" style="width:150rpx"/>
+                    </view>  
+                </view>
+                <view class="official_item_right">
+                    <block wx:for="{{item.tracks}}"  wx:for-item="childitem" wx:key="index">
+                        <view class="music">
+                            <text>{{index+1}}.</text>
+                            <text>{{childitem.first}}-</text>
+                            <text>{{childitem.second}}</text>
+                        </view>
+                    </block>
+                </view>
+                    
+            </view>
+            </navigator>
+        </block>
+          
+    </view>
+    <view class="Featured rankitem" id="Featured">
+        <view class="title">
+            <text>精选榜</text>
+        </view>
+        <view wx:for="{{Featured}}" wx:key="index" class="allitem">
+            <navigator  url="../../pages/playlist/playlist?id={{item.id}}" hover-class="navigator-hover" open-type="navigate" class="item">
+                <view>
+                    <image class="cover" src="{{item.coverImgUrl}}" mode="widthFix" style="width:200rpx"/>
+                    <view class="updateFrequency">
+                        <text>{{item.updateFrequency}}</text>    
+                    </view>
+                    <view class="icon">
+                        <image  src="../../assets/image/fm/play.png" mode="widthFix" style="width:60rpx"/>
+                    </view>
+                </view>
+                <view class="name">
+                    <text>{{item.name}}</text>
+                </view>
+            </navigator>
+
+        </view>
+    </view>
+    <view class="Genre rankitem" id="Genre">
+        <view class="title">
+            <text>曲风榜</text>
+        </view>
+        <view wx:for="{{Genre}}" wx:key="index" class="allitem">
+            <navigator  url="../../pages/playlist/playlist?id={{item.id}}" hover-class="navigator-hover" open-type="navigate" class="item">
+                <view>
+                    <image class="cover" src="{{item.coverImgUrl}}" mode="widthFix" style="width:200rpx"/>
+                    <view class="updateFrequency">
+                        <text>{{item.updateFrequency}}</text>    
+                    </view>
+                    <view class="icon">
+                        <image  src="../../assets/image/fm/play.png" mode="widthFix" style="width:60rpx"/>
+                    </view>
+                </view>
+                <view class="name">
+                    <text>{{item.name}}</text>
+                </view>
+            </navigator>
+        </view>
+    </view>
+    <view class="global rankitem " id="global">
+        <view class="title">
+            <text>全球榜</text>
+        </view>
+        <view wx:for="{{global}}" wx:key="index" class="allitem">
+            <navigator  url="../../pages/playlist/playlist?id={{item.id}}" hover-class="navigator-hover" open-type="navigate" class="item">
+                <view>
+                    <image class="cover" src="{{item.coverImgUrl}}" mode="widthFix" style="width:200rpx"/>
+                    <view class="updateFrequency">
+                        <text>{{item.updateFrequency}}</text>    
+                    </view>
+                    <view class="icon">
+                        <image  src="../../assets/image/fm/play.png" mode="widthFix" style="width:60rpx"/>
+                    </view>
+                </view>
+                <view class="name">
+                    <text>{{item.name}}</text>
+                </view>
+            </navigator>
+        </view>
+    </view>
+    <view class="Feature rankitem" id="Feature">
+        <view class="title">
+            <text>特色榜</text>
+        </view>
+        <view wx:for="{{Feature}}" wx:key="index" class="allitem">
+            <navigator  url="../../pages/playlist/playlist?id={{item.id}}" hover-class="navigator-hover" open-type="navigate" class="item">
+                <view>
+                    <image class="cover" src="{{item.coverImgUrl}}" mode="widthFix" style="width:200rpx"/>
+                    <view class="updateFrequency">
+                        <text>{{item.updateFrequency}}</text>    
+                    </view>
+                    <view class="icon">
+                        <image  src="../../assets/image/fm/play.png" mode="widthFix" style="width:60rpx"/>
+                    </view>
+                </view>
+                <view class="name">
+                    <text>{{item.name}}</text>
+                </view>
+            </navigator>
+        </view>
+    </view> 
+      
+</view>
+  

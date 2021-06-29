@@ -1,0 +1,7 @@
+<!--pages/daliyRec/daliyRec.wxml-->
+<view class="daliyRec">
+    <song-list songlist="{{songlist}}" isDaliy="{{true}}"></song-list>
+</view>
+<hover-play wx:if="{{isPlay}}" myid="{{currentPlay.id}}" cover="{{currentPlay.al.picUrl}}" name="{{currentPlay.name}}" ar="{{filter.artistsName(ar)}}"></hover-play>
+
+  

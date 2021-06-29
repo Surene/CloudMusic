@@ -1,0 +1,194 @@
+.search{
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+}
+.fix_search_box{
+    width: 100%;
+    position: fixed;
+    background: #ffffff;
+    z-index: 11;
+}
+.search_box{
+    margin-top: 30rpx;
+    margin-right: 20rpx;
+    height: 80rpx;
+    border-radius: 40rpx;
+    display: flex;
+    background: #eeeeee;
+    margin-bottom: 40rpx;
+}
+.search_box .search_icon image{
+    width: 40rpx;
+    position: relative;
+    left: 20rpx;
+    top: 20rpx;
+    padding-right: 20rpx;
+}
+.cansel_icon image{
+    width: 40rpx;
+    position: relative;
+    left: 200rpx;
+    top: 20rpx;
+}
+.search_box input{
+    flex: 1;
+    padding-top: 15rpx;
+    font-size: 32rpx;
+    padding-left: 25rpx;
+    color: #a7a2a2;
+}
+
+.search_history{
+    position: relative;
+    min-height: 200rpx;
+    top: 160rpx;
+    left: 20rpx;
+}
+.search_history_header image{
+    width: 40rpx;
+    position: relative;
+    left: 530rpx;
+}
+.search_history_header{
+    display: flex;
+}
+.search_history_content{
+    padding-top: 20rpx;
+}
+.search_history_content_item{
+    display: inline-block;
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+}
+.search_history_content_item text{
+    padding-left: 10rpx;
+    padding-right: 10rpx;
+    padding-top: 10rpx;
+    padding-bottom: 10rpx;
+    background-color: #eeeeee;
+    border-radius: 20rpx;
+    text-align: center;
+}
+.hot_search{
+    position: relative;
+    top: 180rpx;
+    left: 20rpx;
+}
+.hot_search_header{
+    margin-bottom: 20rpx;
+}
+.hot_search_content{
+    position: relative;
+    top: 30rpx;
+}
+.hot_search_item{
+    display: flex;
+    padding-bottom: 30rpx;
+}
+.item_img{
+    display: inline-flex;
+}
+.hot_search_item .hot_search_rank{
+    padding-left: 20rpx;
+    width: 40rpx;
+}
+.hot_search_item:nth-child(1) .hot_search_rank{
+    color: #C20C0C;
+}
+.hot_search_item:nth-child(2) .hot_search_rank{
+    color: #ca0c0c;
+}
+.hot_search_item:nth-child(3) .hot_search_rank{
+    color: #da0c0c;
+}
+.item_content{
+    flex: 1;
+    padding-left: 20rpx;
+    position: relative;
+    top: -15rpx;
+}
+.item_content image{
+    padding-left: 10rpx;
+    width: 50rpx;
+}
+.item_content_content{
+    font-size: 24rpx;
+    color: #969696;
+}
+.item_score{
+    width: 120rpx;
+    font-size: 24rpx;
+    color: #a7a2a2;
+}
+
+.search_suggest{
+   width: 100%;
+   background: #ffffff;
+   position: absolute;
+   z-index: 9;
+   border-top: 2rpx solid black;
+}
+.search_result{
+    width: 100%;
+    background: #ffffff;
+    position: absolute;
+    z-index: 10;
+    border-top: 2rpx solid black;
+ }
+ .search_result_item{
+    padding-left: 20rpx;
+    padding-top: 20rpx;
+    padding-bottom: 10rpx;
+    margin-right: 20rpx;
+    border-bottom: 2rpx solid #cccccc;
+    display: flex;
+    position: relative;
+ }
+ .search_result_info{
+    max-width: 500rpx;
+ }
+.search_result_item image{
+    width: 40rpx;
+    position: absolute;
+    left: 650rpx;
+    top: 40rpx;
+}
+.search_result_info_name{
+    word-break:break-all;
+			text-overflow:ellipsis;
+			display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+			-webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+			-webkit-line-clamp:1 ; /** 显示的行数 **/
+			overflow: hidden;  /** 隐藏超出的内容 **/
+			cursor:default;
+			text-indent: 0em;
+}
+.search_result_info_artists{
+    color:#BDBCCF;
+    font-size: 26rpx;
+    display: flex;
+    padding-top: 10rpx;
+}
+.search_currentword{
+    padding-left: 20rpx;
+    padding-top: 20rpx;
+    color: #6495ED;
+    padding-bottom: 40rpx;
+}
+.search_suggest_item{
+    display: flex;
+    padding-bottom: 40rpx;
+}
+.search_item_img image{
+    padding-left: 10rpx;
+    width: 40rpx;
+}
+.item_keyword{
+    padding-left: 20rpx;
+    flex: 1;
+}
+
+
+

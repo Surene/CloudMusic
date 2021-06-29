@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "tab-control":"../../components/tab_control/tab_control",
+    "hover-play":"../../components/hover-play/hover-play"
+
+  },
+  "navigationBarTitleText": "排行榜"
+}
