@@ -26,11 +26,13 @@ export function getHotCategory(){
 export function getPlayListDetail(id){
     let user = wx.getStorageSync("user")
     let cookie = user.cookie
+    let timestamp = Date.parse(new Date())
     return request({
         url:'playlist/detail',
         data:{
             id,
-            cookie
+            cookie,
+            timestamp
         }
     })
 }

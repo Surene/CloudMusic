@@ -268,7 +268,7 @@ Page({
       })
       let id = this.data.song.id
       addToLikelist(id,isLike).then(res => {
-        console.log(res);
+        // console.log(res);
       }) 
     }else{
       wx.navigateTo({
