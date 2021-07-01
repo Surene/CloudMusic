@@ -27,7 +27,7 @@
             </view>   
         </view>
         <view  hidden="{{!showLyrics}}" class="lyrics">
-            <scroll-view  bindscroll="lyricsScroll" scroll-with-animation  scroll-with-animation="{{true}}" class="haslyrics">
+            <scroll-view  bindscroll="lyricsScroll" scroll-y="{{true}}"  scroll-with-animation="{{true}}" class="haslyrics">
                 <view wx:if="{{currentMusicLyrics}}" >                 
                     <view class="placeholder"></view>
                     <block wx:for="{{currentMusicLyrics}}" wx:key="index">
